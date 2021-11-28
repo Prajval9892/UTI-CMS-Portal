@@ -57,13 +57,13 @@
             <div class="sidebar-heading">
                 Interface
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-plus"></i>
+                <a class="nav-link collapsed" href={% url 'add_product' %}>
+                    <i class="fas fa-fw fa-user-md"></i>
                     <span>Add Product</span>
+                </a>
+            </li>
+
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -80,28 +80,17 @@
                         <span>Add docter</span>
                     </a>
                 </li>
-                           <!-- Nav Item - Add dr. Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#">
-                        <i class="fas fa-fw fa-hospital-user"></i>
-                        <span>Add Employe</span>
-                    </a>
-                </li>
+                     
 
             <!-- Nav Item - view product Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href={% url 'view_table' %}>
-                    <i class="fas fa-fw fa-binoculars"></i>
-                    <span>View all products</span>
-                </a>
-            </li>
+            
 
 
                  
 
             <!-- Nav Item - Shedul Appointment Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href={% url 'shedule_docter' %}>
                     <i class="fas fa-fw fa-calendar-plus"></i>
                     <span>Shedule Appointment</span>
                 </a>
@@ -109,19 +98,13 @@
 
             <!-- Nav Item - today's Appointment Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href={% url 'toda_shedule' %}>
                     <i class="fas fa-fw fa-calendar-day"></i>
                     <span>Today's Shedule</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Shedul Appointment Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Deals Detail</span>
-                </a>
-            </li>
+            
 
             
             <!-- Divider -->
@@ -131,6 +114,29 @@
             <div class="sidebar-heading">
                 Addons
             </div>
+                  <!-- Nav Item - Add dr. Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{% url 'add_emp' %}"                                 ">
+                        <i class="fas fa-fw fa-hospital-user"></i>
+                        <span>Add Employe</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{% url 'product_detail' %}"                                 ">
+                        <i class="fas fa-fw fa-hospital-user"></i>
+                        <span>Product Details</span>
+                    </a>
+                </li>
+
+                      <!-- Nav Item - Add dr. Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{% url 'deal_detail' %}"                                 ">
+                        <i class="fas fa-fw fa-hospital-user"></i>
+                        <span>Deals Details</span>
+                    </a>
+                </li>
+                
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -160,12 +166,7 @@
                     <span>Charts</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href={% url 'view_table' %}>
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

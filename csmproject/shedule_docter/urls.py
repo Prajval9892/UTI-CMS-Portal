@@ -17,18 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from addprojectapp import views
+from shedule_docter import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.css,name="dashboard"),
-    path('',include('add_dr.urls')),
-    path('/',include('addemploye.urls')),
-    path('/',include('add_product.urls')),
-    path('/',include('today_shedule.urls')),
-    path('/',include('shedule_docter.urls')),
-    path('/',include('deal_detail.urls')),
-    path('/',include('product_detail.urls')),
+    path('shedule',views.shedule_dr,name="shedule_docter")
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
